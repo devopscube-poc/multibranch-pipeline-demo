@@ -34,13 +34,5 @@ pipeline {
             }
         }
 
-        stage('Priting All Global Variables') {
-            steps {
-                sh """
-                env
-                """
-            }
-        }
-
     }   
 }
