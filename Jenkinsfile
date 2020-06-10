@@ -8,7 +8,7 @@ pipeline {
 
     options {
         buildDiscarder logRotator( 
-                    daysToKeepStr: '15', 
+                    daysToKeepStr: '16', 
                     numToKeepStr: '10'
             )
     }
@@ -31,14 +31,6 @@ pipeline {
                     branches: [[name: '*/master']], 
                     userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
                 ])
-            }
-        }
-
-        stage('Priting All Global Variables') {
-            steps {
-                sh """
-                env
-                """
             }
         }
 
